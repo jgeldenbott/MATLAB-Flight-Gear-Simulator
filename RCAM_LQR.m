@@ -55,16 +55,32 @@ disp(K)
 
 %% Run the Sim
 % define initial sim parameters
-TF = 30;
+TF = 100;
 x0 = X_bar;% + [1;1;1;0;0;0;3;2;1]*0.1;   % initial state of RCAM_model
 P0 = [0;0;7000];                       % initial navigation position
 GEO0 = [47.531478*pi/180; -122.303680*pi/180; 700];                   % initial position in Geodetic Coordinates
 
 % define disturbance parameters (in degrees)
-ail_dist = 25;      % deg
-stab_dist = -30;    % deg
+ail_dist = -25;      % deg
+stab_dist = 15;    % deg
 rud_dist = -30;      % deg
 dist_dt = 5;        % sec
+
+% min and max control surface deflections
+u1min = deg2rad(-25);
+u1max = deg2rad(25);
+
+u2min = deg2rad(-25);
+u2max = deg2rad(10);
+
+u3min = deg2rad(-30);
+u3max = deg2rad(30);
+
+u4min = deg2rad(0.5);
+u4max = deg2rad(10);
+
+u5min = u4min;
+u5max = u4max; 
 
 % run the sim
 simOut = sim('RCAMSimulation.slx');

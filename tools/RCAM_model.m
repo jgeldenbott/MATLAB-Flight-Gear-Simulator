@@ -70,11 +70,11 @@ u5min = u4min;
 u5max = u4max; 
 
 % check to see if values are within the control limits
-u1 = check_control_limit(u1, u1min, u1max);
-u2 = check_control_limit(u2, u2min, u2max);
-u3 = check_control_limit(u3, u3min, u3max);
-u4 = check_control_limit(u4, u4min, u4max);
-u5 = check_control_limit(u5, u5min, u5max);
+% u1 = check_control_limit(u1, u1min, u1max);
+% u2 = check_control_limit(u2, u2min, u2max);
+% u3 = check_control_limit(u3, u3min, u3max);
+% u4 = check_control_limit(u4, u4min, u4max);
+% u5 = check_control_limit(u5, u5min, u5max);
 
 %% 2. Intermediate variables
 % airspeed
